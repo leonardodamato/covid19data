@@ -100,7 +100,8 @@ class NetworkManager {
     
     func getNews(country: Countries, completion: @escaping([News]) -> Void) {
         let baseUrl = "https://newsapi.org/v2/top-headlines?"
-        let apiKey = "apiKey=c5eb9fef938046fcaf94d0b1feed6989"
+        //In order to use the News API, you'll need to get and API KEY from them. Please visit www.newsapi.org
+        let apiKey = ""
         let keywordsParameter = "q=corona&q=covid"
         let countryParameter = "country=" + country.code
         
