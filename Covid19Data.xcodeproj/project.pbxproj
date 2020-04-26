@@ -27,7 +27,6 @@
 		B9D39B562439B69A0064195B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D39B552439B69A0064195B /* AppDelegate.swift */; };
 		B9D39B582439B69A0064195B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D39B572439B69A0064195B /* SceneDelegate.swift */; };
 		B9D39B622439B6AD0064195B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9D39B602439B6AD0064195B /* LaunchScreen.storyboard */; };
-		B9D39B6A2439B7AF0064195B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D39B692439B7AF0064195B /* HomeViewController.swift */; };
 		B9D39B6C2439B7BD0064195B /* CountriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D39B6B2439B7BD0064195B /* CountriesViewController.swift */; };
 		B9D39B6E2439B7D70064195B /* CountryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D39B6D2439B7D70064195B /* CountryDetailsViewController.swift */; };
 		B9D39B752439BB5B0064195B /* CVDStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D39B742439BB5B0064195B /* CVDStatsView.swift */; };
@@ -68,7 +67,6 @@
 		B9D39B572439B69A0064195B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B9D39B612439B6AD0064195B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B9D39B632439B6AD0064195B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B9D39B692439B7AF0064195B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B9D39B6B2439B7BD0064195B /* CountriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewController.swift; sourceTree = "<group>"; };
 		B9D39B6D2439B7D70064195B /* CountryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsViewController.swift; sourceTree = "<group>"; };
 		B9D39B742439BB5B0064195B /* CVDStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVDStatsView.swift; sourceTree = "<group>"; };
@@ -159,7 +157,6 @@
 			isa = PBXGroup;
 			children = (
 				B98EECC42443F5FD00020E0D /* Settings */,
-				B9D39B692439B7AF0064195B /* HomeViewController.swift */,
 				B9D39B6B2439B7BD0064195B /* CountriesViewController.swift */,
 				B9D39B6D2439B7D70064195B /* CountryDetailsViewController.swift */,
 				B9D39B862439F5700064195B /* NewsViewController.swift */,
@@ -392,7 +389,6 @@
 				B9D39B872439F5700064195B /* NewsViewController.swift in Sources */,
 				B932DE4324406AF000EADB47 /* GlobalViewController.swift in Sources */,
 				B9D39B6E2439B7D70064195B /* CountryDetailsViewController.swift in Sources */,
-				B9D39B6A2439B7AF0064195B /* HomeViewController.swift in Sources */,
 				B9078AA9243DC2A900728509 /* String+Ext.swift in Sources */,
 				B932DE4824406BC300EADB47 /* Statistics.swift in Sources */,
 				B932DE3F2440523B00EADB47 /* SelectCountryViewController.swift in Sources */,
@@ -551,7 +547,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.devleo.Covid19Data;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -570,7 +566,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.devleo.Covid19Data;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

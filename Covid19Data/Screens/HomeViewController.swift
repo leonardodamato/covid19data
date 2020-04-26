@@ -39,23 +39,17 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         showLoadingView()
-        NetworkManager.shared.getGlobalData { [ weak self ](total) in
+        NetworkManager.shared.getGlobalData { [ weak self ] total in
             guard let self = self else { return }
             
             DispatchQueue.main.async {
-                self.refreshData(total: total)
-                self.configureUI()
-                self.configureLocationTitle()
-                self.configureCases()
-                self.configureDeaths()
-                self.configureRecovered()
-                self.configureChart()
+                self.updateView(total: total)                
             }
             self.dismissLoadingView()
         }
     }
     
-    func refreshData(total: TotalsGlobal) {
+    func updateView(total: TotalsGlobal) {
         totalCases = CVDStatsView(text: "Total Cases", data: total.TotalConfirmed, textColor: .label, fontSize: 20)
         newCases = CVDStatsView(text: "New Cases", data: total.NewConfirmed, textColor: .label, fontSize: 20)
         
@@ -64,6 +58,15 @@ class HomeViewController: UIViewController {
         
         totalRecovered = CVDStatsView(text: "Total Recovered", data: total.TotalRecovered, textColor: .systemGreen, fontSize: 20)
         newRecovered = CVDStatsView(text: "New Recovered", data: total.NewRecovered, textColor: .systemGreen, fontSize: 20)
+        
+        configureUI()
+        configureLocationTitle()
+        configureCases()
+        configureDeaths()
+        configureRecovered()
+        
+        //TODO: - Chart for homescreen will be available when API is updated with the correct data.
+        configureChart()
     }
     
     func configureUI() {

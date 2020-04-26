@@ -126,9 +126,10 @@ class GlobalViewController: UIViewController, UIScrollViewDelegate{
                 
                 self.add(childViewController: StatisticsViewController(statistic: recovered, totalNumber: recovered.totalData, newNumber: recovered.newData), to: self.recoveredView)
                 
-                let days = ["20/04", "21/04", "22/04", "23/04", "24/04"]
-                let cases = [123, 452, 12, 89, 1860]
-                self.add(childViewController: LineChartViewController(labelsArray: days, dataArray: cases), to: self.chartView)
+                //TODO: Global chart will be configured when API updates their data with the correct information. 
+                //let days = ["20/04", "21/04", "22/04", "23/04", "24/04"]
+                //let cases = [123, 452, 12, 89, 1860]
+                //self.add(childViewController: LineChartViewController(labelsArray: days, dataArray: cases), to: self.chartView)
                 
             }
             self.dismissLoadingView()

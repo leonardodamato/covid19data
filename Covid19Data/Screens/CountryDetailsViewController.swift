@@ -34,7 +34,7 @@ class CountryDetailsViewController: UIViewController {
         super.viewDidLoad()
         
         guard let _ = selectedCountry else {
-            #warning("ALERT ERROR HERE")
+            self.showErrorAlert(title: "Error", message: "Please select a country.")
             return
         }
         showLoadingView()
