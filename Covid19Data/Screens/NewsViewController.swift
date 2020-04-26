@@ -143,7 +143,7 @@ class NewsViewController: UIViewController {
     
     @objc func goToArticle() {
         guard let url = URL(string: article.url) else {
-            #warning("create error here")
+            self.showErrorAlert(title: "Error", message: "Invalid URL. Please try again.")
             return
         }
         

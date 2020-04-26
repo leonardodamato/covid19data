@@ -32,13 +32,16 @@ class CountriesViewController: UIViewController {
         NetworkManager.shared.getCountriesData { [ weak self ] (countriesData) in
             guard let self = self else { return }
             self.countries = countriesData
-            self.configureUI()
-            self.configureSegmentedControl()
-            self.configureTableViewContainer()
-            self.configureDataTableView()
-            
+            self.updateView()
             self.dismissLoadingView()
         }
+    }
+    
+    func updateView() {
+        configureUI()
+        configureSegmentedControl()
+        configureTableViewContainer()
+        configureTableView()
     }
     
     func configureUI() {
@@ -93,7 +96,7 @@ extension CountriesViewController: UITableViewDelegate, UITableViewDataSource {
         ])
     }
     
-    func configureDataTableView() {
+    func configureTableView() {
         dataTableView = UITableView(frame: tableViewContainer.bounds)
         dataTableView.translatesAutoresizingMaskIntoConstraints = false
         tableViewContainer.addSubview(dataTableView)

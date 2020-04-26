@@ -106,7 +106,6 @@ class NetworkManager {
         
         let urlString = baseUrl + apiKey + "&" + keywordsParameter + "&" + countryParameter
         guard let url = URL(string: urlString) else {
-            #warning("print error")
             return
         }
         
